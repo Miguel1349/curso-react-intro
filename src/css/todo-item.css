@@ -1,0 +1,17 @@
+.task-done {
+    text-decoration: line-through;
+    color: rgb(17, 105, 17);
+    border-color: rgb(17, 105, 17);
+}
+
+input:focus {
+    outline-color: rgb(17, 105, 17);
+}
+
+.btn:hover {
+    fill: red;
+}
+
+.local-icon:hover {
+    fill: green;
+}

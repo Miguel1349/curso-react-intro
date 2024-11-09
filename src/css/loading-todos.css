@@ -1,0 +1,17 @@
+.icon-skeleton {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(196, 189, 189);
+    border-radius: 20px;
+    margin-left: 2px;
+}
+
+.input-text-skeleton {
+    height: 45px;
+    margin-left: 2px;
+    background-color: rgb(196, 189, 189);
+}
+
+@keyframes {
+    
+}
