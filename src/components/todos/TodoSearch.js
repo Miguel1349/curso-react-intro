@@ -1,8 +1,6 @@
 import React from 'react';
-import { TodoContext } from './TodoContext';
 
-function TodoSearch() {
-  const {searchValue, setSearchValue} = React.useContext(TodoContext);
+function TodoSearch({searchValue, setSearchValue, loading}) {
   return (
     <div className="col-md">
       <div className="input-group input-group-sm mb-3">
@@ -17,6 +15,7 @@ function TodoSearch() {
           placeholder="Cortar cebolla"
           value={searchValue}
           onChange={event => setSearchValue(event.target.value)}
+          disabled={loading}
         />
       </div>
     </div>

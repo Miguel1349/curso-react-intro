@@ -1,16 +1,8 @@
 import React from "react";
 import "../../css/todo-count.css";
-import { TodoContext } from "./TodoContext";
 
-/*const styles = {
-  fontSize: '24px',
-  textAlign: 'center',
-  margin: 0,
-  padding: '48px'
-}*/
 
-function TodoCounter() {
-  const {totalTodos: total, completedTodos: completed} = React.useContext(TodoContext);
+function TodoCounter({totalTodos: total, completedTodos: completed}) {
     return (
       <div className="row text-center">
         <div className="col">    

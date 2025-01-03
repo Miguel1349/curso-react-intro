@@ -3,23 +3,23 @@ import { DeleteIcon } from '../icons/DeleteIcon';
 import { EditIcon } from '../icons/EditIcon';
 import '../../css/todo-item.css';
 
-function TodoItem({ text, completed, onComplete, onDelete}) {
+function TodoItem(props) {
     return (
       <li className="list-group-item">
         <div className="input-group">
           <CompleteIcon
-            completed={completed}
-            onComplete={onComplete}
+            completed={props.completed}
+            onComplete={() => props.completeTodo(props.text)}
           />
           <input
             type="text"
-            className={`form-control ${completed ? "task-done" : ""} input-complited`}
-            value={text}
+            className={`form-control ${props.completed ? "task-done" : ""} input-complited`}
+            value={props.text}
             readOnly={true}
           />
           <div className="input-group-append">
             <EditIcon />
-            <DeleteIcon onDelete={onDelete}/>
+            <DeleteIcon onDelete={() => props.deleteTodo(props.text)}/>
           </div>
         </div>
       </li>

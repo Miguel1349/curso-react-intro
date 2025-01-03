@@ -1,8 +1,6 @@
 import React from "react";
-import { TodoContext } from "./TodoContext";
 
-function CreateTodoButton() {
-    const { updateModal, searchValue, addTodo } = React.useContext(TodoContext);
+function CreateTodoButton({ updateModal, searchValue, addTodo }) {
 
     const createTodo = () => {
         addTodo(searchValue);
